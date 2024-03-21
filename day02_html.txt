@@ -1,0 +1,153 @@
+  
+  head의 title 안에 쓴다
+  <style>
+        /* 스타일 안에서 쓰는 주석양식 (전체 선택자 : *) */
+        *{color: red; background-color: yellow;}
+        /*태그 선택자 -  b 태그에 {이 값을 넣는다} 30px로도 입력 가능*/
+        b {font-size: large;}
+        /*id 선택자  해당하는 페이지에는 아이디 하나  id="id_txt"*/
+        #id_txt {background:  gray;}
+        /*class 선택자 class="class_txt"*/
+        .class_txt {color: black;}
+
+    </style>
+
+      <dt><b>CSS구성</b></dt>
+    <dd>선택자(selector) : 디자인을 적용할 대상 지정</dd>
+    <dd>속성 : 어떤 디자인을 설정하리</dd>
+    <dd>속성 값 : 속성에서 선택한 디자인을 어떻게 반영할지</dd>
+    <!--항상 같이 쓰이는 3개-->
+
+
+     <style>
+        .box p {color: blue;}  /*하위 선택자 본인하위 모든 부분*/
+        .box > p {color : red;} /*자식 선택자 본인 div에만, 자식의 자식에는 안들어감*/
+        .box + div {background-color: gray;} /*인접 선택자 바로 뒤 하나만*/
+        .box ~ p {background-color: green;} /*형제 선택자 같은 계층은 다*/
+    </style>
+</head>
+<body>
+    <div class = "box">
+        <p>1.하위 선택자는 특정 선택자 하위의 모든 요소를 말한다</p>
+        <div>
+            <p>2.자식 선택자는 직속 자식 요소를 말한다</p>
+        </div>
+        <p>3.다음 내용</p>
+    </div> 
+    <div>1.인접 선택자는 바로 뒤에 나오는 하나의 요소</div>
+    <div>2.인접 선택자는 바로 뒤에 나오는 하나의 요소</div>
+    <p>형제 선택자는 같은 계층에 있는 요소에 적용된다</p>
+</body>
+</html>
+  <!--하위와 자식이 똑같이 본인 div에 적용되는데 자식이 우선순위라서
+            둘이 다른 색으로 적용하면 자식의 색이 들어간다.
+            하지만 하위는 본인칸의 또 다른 자식에도 적용이 되지만 
+            자식 선택자는 자식의 자식에는 적용이 안된다.-->
+
+
+               <style>
+        div{
+            width: 200px; height:100px; color:blue;
+            background: green; opacity: 0.9;
+        }
+        div:hover{
+        width : 400px; height:50px; color: red;
+        background: yellow; opacity: 0.3;
+        transition: all 1.5s linear 0.1s;
+        /* linear는 마우스 올린후 애니메이션이 시작되기까지의 시간
+        all은 애니메이션이 시작하고 끝나기까지의 시간*/
+        }
+    </style>
+</head>
+<body>
+    <h2>가상 선택자</h2>
+    <div>가상 클래스를 이용한 애니메이션 효과</div>
+</body>
+
+문제풀이 보기
+a:link {color:pink; text-decoration: none;}
+        a:visited {color : red;}/*클릭했던것은 빨간색으로*/
+        a:hober {text-decoration:  overline; color:black}
+        a:active {background: yellow;}/*클릭할때*/
+
+   link : 웹 문서에서 사용자가 방문하지 않았던 곳<br>
+    visited : 웹 문서에서 사용자가 방문한 곳<br>
+    hover : 포인터가 올라갔을 경우<br>
+    active : 클릭이 되는 순간
+
+
+
+    <style>
+        .div01{
+            overflow: hidden;/*이 태그를 넘어가는 내용은 숨긴다*/
+            background-color: blue; height: 100px;}
+        .div01 div{background: red; width: 200px; height: 200px;}
+        .txt{
+            overflow: auto;
+            height: 100px; width: 100px; background: aqua;}
+            /*내용보다 칸이 작을때 내용이 넘쳐나기도 함
+            auto는 칸의 크기도 지키고 내용은 스크롤로 넘겨볼 수 있게 함*/
+
+    </style>
+</head>
+<body>
+    <div class="div01">
+        hello
+        <div>css</div>
+    </div>
+    <h1>다음 내용</h1>
+    <div class="txt">
+        제283조<br>
+        회원이 지켜야 할 내용은 지켜주세요<br>
+        내용은 없음<br>
+        반갑다<br>
+        좋은 하루 되세요
+    </div>
+</body>
+
+
+text-align:center;}/*모든 글자를 가운데맞춤*/
+        .over{overflow: hidden; background:red; margin:auto; width: 100px; 
+            height: 100px;}
+        /*부모태그에서 현재 태그를 가운데 맞춤*/
+
+/*list-style:ul-li 점 사라지게 함
+        display: flex > 글자 가로배치
+        justify-content: flex-end > 오른쪽 배치
+        */
+
+     border-bottom : 1px solid orange; 
+     /*그냥 보더로 네모난 박스로 만들수도 있고 보더-위치지정해서 아래만 줄 생기게도 가능*/
+    
+    padding-bottom: 3px; transition: all 0.25s;}/*자기자신 기준으로 안족을 밀어냄*/
+    padding: 10px 10px;/*margin자신을 기준으로 바깥으로 밀어냄
+            숫자 4개를 쓸 수 있는데 순서는 위에서부터 시계방향으로 보면된다
+            위 오른쪽 아래 왼쪽 순
+            패딩은 안쪽으로 밀지만 밀 자리가 없을경우 해당 태그의 길이가 늘어난다*/
+
+               display: flex사용시 아래내용 적용 가능<br>
+    flex-start:왼쪽 끝 정렬<br> flex-end:오른족 끝 정렬<br>
+    space-around : 요소 좌우 동일 간격 정렬<br>
+
+      기본 글자 크기는 16px<br> 글자 크기 단위<br>
+    -px : 해상도에 따라 상대적으로 달라지는 단위<br>
+    -pt : 무조건 고정 크기<br>
+    -% : 부모 요소의 크기를 100%기준으로 계산<br>
+    -em : 부모 크기를 100% 기준으로 100분의 1단위<hr>
+    <a href="http://pxtoem.com.au" target="_blank">단위 변환 사이트</a>
+
+    .color01{color: red;}
+        .color02{color: #0000ff;}
+        .color03{color: rgb(97, 77, 77);}
+        .color04{color: rgba(161, 46, 0, 0.329);}
+        색깔 입력하는 4가지 방법
+
+        border-radius 모서리 둥글기를 조절 가능
+
+
+
+
+
+
+
+

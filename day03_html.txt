@@ -1,0 +1,70 @@
+text-shadow: 10px 10px 15px black;
+            /*첫째값 양수는 오른쪽 음수는 왼쪽, 두번째는 아래로, 세번째는 번짐정도
+            텍스트에만 적용되는 그림자. 그림에는 box-shadow*/
+
+            {width: 33.333%;}/*안의 값에 각각 해당 퍼센트만큼 공간을 준다*/
+
+            #wrap div:nth-child(3){order:1;background: blue;}
+        /*order 각 순서를 다시 배치할 수 있다.*/
+
+        .span1{background: yellow; position: relative; top: 5px;}
+
+        /*position의 위치값
+        static 흐름에 맞게 배치된다. 위치조정을 할 수 없다
+        relative 흐름의 위치를 기준으로 위치조정
+        absolute 절대 위치, 웹페이지를 기준으로 위치를 잡는다
+        fixed 화면을 움직여도 그 위치 그대로*/
+
+
+        z-index: 1; 
+        /*z-index 설정은 position이 설정되어 있는상태에서 가능
+        제일 높은 숫자가 화면의 가장 위에 위치
+        static는 z-index조절 되지 않으며, -1은 제일 아래 놓겠다는 의미*/
+
+        position: absolute; background: lime;
+            top: 150px; left: 150px; width: 100px; height: 100px;
+            >화면의 정 중앙에 위치시키고 싶을때
+
+<!--링크의 경우 위에 내용이 덮히면 클릭이 안될 수 도 있다-->
+
+<!--부트스트랩을 이용해 디자인을 하려면 팀원들과 맞춰야 
+다른 pc에서 그림이 뒤틀리지 않는다.-->
+
+w3school > bootstrap > 원하는 기능(버튼, 테이블 등) 선택 
+> 코드에서 디자인연동하는 부분 복붙
+
+가로 사이즈는 필수, 사용자마다 환경이 다른 모니터라서 모양이 깨질 수 도 있다.
+백그라운드는 정확히 px로 입력할것
+모든것에 마진이 있으므로 원하지 않는 갭을 없애려면 *{margin:0;}
+
+참고용
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0;}
+        #wrap { width: 70% ; background: red; margin: auto;}
+        #header { background: goldenrod;}
+        #content { background: yellowgreen; display: flex;}
+        h1 { width: 33.3333333%;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>header</h1>
+        </div>
+        <div id="content">
+            <h1 style="background: red;">content</h1>
+            <h1 style="background: gray;">content</h1>
+            <h1 style="background: greenyellow;">content</h1>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

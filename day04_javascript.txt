@@ -1,0 +1,91 @@
+<script>  </script> 로 단락을 나누어 사용한다
+
+        /*다음줄에 내용을 적으면 세미콜론 생략 가능(한줄로 쓸땐 필요함)
+            문자열은 큰따옴표, 작은따옴표 둘다 허용*/
+
+        let 으로 변수를 할당함. 자료형은 없어도 된다
+
+        let num = 100;
+        let srt = "문자열"
+        let fl = 1.123;
+        let bool = true;
+        let arr = [1, 2, 3];
+        let obj = {num: '홍길동', "age":20}
+        let test;
+
+        웹페이지에서 F12를 눌렀을때 나오는 콘솔로 로그를 볼수 있다.
+        오류도 콘솔에서 확인가능
+        console.log(num, typeof (num));
+        console.log(srt, typeof (str));
+        console.log(fl, typeof (fl));
+        console.log(bool, typeof (bool));
+        console.log(arr, typeof (arr));
+        console.log(obj, typeof (obj));
+        console.log(test, typeof (test));
+
+        console.log("변경 후 : ",num, typeof num)
+        // 해당변수의 자료형을 출력한다
+        모든 변수는 기본 문자열(String)이다
+
+         document.write(`이름 : ${name}님의 나이는 ${age}살 입니다<hr>`);
+        /* `` 셉틱? 변수와 문자열 +없이 한번에 쓸 수 있음
+        변수를 넣을 땐 ${} 형태로*/
+
+        let num = Number(age); //자료형 변환
+
+        console.log(`num : ${typeof (num+"")}`)
+        //괄호치면 먼저 처리하게 하는것
+
+        let name = '홍길동';
+        //let name = '김개동'; 이렇게 다시 호출 불가능
+        name = '김개똥';
+        var age = 20;
+        var age = 30;
+        console.log(age, name)
+        // let은 한번만 사용가능 var는 여러번 사용 가능
+   
+    const key = '키키티'; //값을 상수화
+    //key = '값 변경'; //이렇게 안됨 상수화 시켜서 변경할 수 없다
+
+    const str01 = "안녕하세요\
+        그래\
+        반갑다";
+        //역슬래시로 다음줄 넘어간 문자열을 이어줄 수 있다
+
+        const str02 = `그래
+        반가와
+        안녕`;
+        // ``으로도 가능
+
+    console.log(typeof Number(num01), " : " + Number(num01))
+    //쓰여진 숫자 그대로
+    console.log(typeof parseInt(num01), " : " + parseInt(num01))
+    //정수만(형변환을 한다)
+
+
+    연산자는 거의 다 자바와 비슷하나 관계연산자의 경우
+    ==와 != 는 자바와 동일함
+    ===와 !==는 자료형까지 같은가를 확인해 참 거짓 출력
+     
+
+        document.write(`<hr>`);
+        n1 = '3'; n2 = 3;
+
+        document.write((n1 == n2) +"<br>");// 자료형이 다르지만 둘다 3 참
+        document.write((n1 != n2) +"<br>");// 거짓
+        document.write((n1 === n2) +"<br>");// 거짓
+        document.write((n1 !== n2) +"<br>");// 참
+
+스크립트로 테이블 뽑고 싶을때
+document.write(``); 안에 테이블 내용을 넣으면 된다
+document.write(`
+        <table border="1">
+            <th>이름</th><th>나이</th><th>주소</th>
+            <tr>
+                <td>${name}</td><td>${age}</td><td>${address}</td>
+            </tr>
+            <tr>
+                <td>${name}</td><td>${age}</td><td>${address}</td>
+            </tr>
+        </table>
+   `);

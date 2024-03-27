@@ -1,0 +1,59 @@
+const city = ['서울', '부산', '인천'];
+배열 형식으로 만들기
+
+ city[3] = '대구'; //추가가 제한없이 자유롭다
+
+ const join02 = city.join("-");//값 사이의 표시를 바꾼다
+        document.write(`조인 결과 1 : ${join01}, type : ${typeof join01}<br>`)
+        //타입이 문자열로 바뀌며 더이상 배열이 아니게 된다
+
+let kdata = ['서울', '부산'];
+       
+        kdata.push('인천', '대구');//뒤쪽에 값 추가
+        kdata.pop();//뒤에 있는값 하나를 뺀다
+        kdata.unshift('111', '222'); //앞쪽에 값 추가
+        kdata.shift();//앞족의 값 하나를 뺀다
+      
+
+
+  data.forEach(t); //단순 출력 연산(리턴값을 가질 수 없다)
+
+회원가입-콘캣, 
+
+ const result01 = data.filter(filter01);//필터 특정 값 찾기
+
+필터는 배열에 쓸수있는 기능으로 항상 첫번째로 데이터값, 두번째로 인덱스값을 불러온다
+필터에 있는 값은 항상 배열형태
+
+
+for(const user of userDB) //디비에 있는 값을 하나씩 다 가져옴
+
+
+~querySelector 의 사용법~
+const div2 = document.querySelector(".test2");
+<div class = "test2";></div>
+
+
+  setTimeout(test, 2000); //특정 함수를 한번 호출한다, 알람과 따로 동작하는것
+  
+        let e;
+        const digClock = () => {
+            let today = new Date();
+            let time = today.getMonth() + 1 + "월";//+1을 해줘야 현재의 월을 볼 수 있다
+            time += today.getDate() + "일";
+            time += today.getHours() + "시";
+            time += today.getMinutes() + "분";
+            time += today.getSeconds() + "초";
+            document.getElementById("clock").innerHTML = time;
+            e = setTimeout(digClock, 1000);
+            //첫번째값을 호출한다, 두번재 시간의 값만큼 지난 이후에(1초)
+        }
+        const end = () => {clearTimeout(e);}
+        //셋 타임은 해당 코드를 딱 한번만 호출한다
+
+        시간관련은 ex25,26
+
+        .createElement() > 요소를 만든다?
+        .appedChild() > 만든요소를 태그로 만들어 사용가능하게 한다?
+
+        위 두개는 아직 잘 모르겠다 검색해볼것.

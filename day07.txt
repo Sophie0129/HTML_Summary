@@ -1,0 +1,85 @@
+   /*연결되어 있는 파일에 다 온로드가 있어도
+    최총 실행 파일것 하나만 실행이 된다
+    실행파일에 온로드가 없으면 
+    온로드가 있는 파일중 마지막으로 불린 파일의
+    온로드가 실행된다.
+    */
+
+    <link href="ex29.css" rel="stylesheet"> <!--css파일 불러오기-->
+<script src="ex29.js"></script> <!--js 파일 불러오기-->
+
+    <!--웹페이지의 F12 네트워크를 확인하면 연결된 파일이 뜬다-->
+
+    <form action="ex29.html" method="get">
+        폼을 쓰면 메소드로 버튼에 기능을 추가 가능
+        자바 스크립트는 온클릭, 온마우스오버 같이 하나씩 설정해줘야함
+
+
+    .focus > 해당란에 커서를 올려놓는다.
+    ex_비밀번호 잘못썼을때 다시쓰라는 알람이후 커서가 비밀번호쓰는 란에 있는것
+
+        <input type="password" id="pwd" ><br> 
+<!--패스워드로 하면 입력값이 감춰지고 전부 0으로 입력된다.(한글이 입력되지 않는다)-->
+<input type="text" id="pwdCheck" onchange = "pwdChk()"><br>
+<!--온체인지는 마우스가 태그를 떠났을때? 실행된다-->
+~~~~~
+사용자가 <select> 요소의 선택된 옵션을 변경할 때 함수를 호출합니다.
+HTML 요소의 값이 변경 되면 이벤트 onchange가 발생합니다 .
+
+팁: 이 이벤트는 oninput 이벤트 와 유사합니다 .
+차이점은 oninput 이벤트는 요소의 값이 변경된 직후에 발생하는 반면,
+onchange는 내용이 변경된 후 요소가 포커스를 잃었을 때 발생한다는 것입니다.
+다른 차이점은 onchange 이벤트가 <select> 요소에서도 작동한다는 것입니다.
+~~~~~~
+
+
+//window.open();//새창을 열어준다
+            //open('https://www.naver.com') //window는 생략가능
+            //window.open('https://www.naver.com','_self') //2개창이 아니라 1개로 내용만 바뀜
+            //window.open('ex30.html','','Width=500,height=500')//새창의 크기를 정함
+            window.open('popup.html','','Width=500,height=500')
+
+
+<form id ='fo' action="ex31.html">
+        <div id="ddd" class="div"></div>
+        <input type="text" id="txt"><br>
+        <input type="submit" onclick="test()" value="submit전송">
+        <input type="button" onclick="test()" value="btn전송">
+        <!-- submit은 form의 연결을 반드시 실행시킨다
+        onclick이 먼저 실행되고 다음에 실행됨
+    버튼은 온클릭만 실행시킴
+    버튼으로 form의 연결페이지로 이동하고 싶을땐 따로 폼에 아이디를 넣어
+    그 아이디에 승인메소드를 넣어준다-->
+
+
+ //fo.submit();
+            console.log(fo)
+            console.log(fo.txt)//해당 태그의 내용을 가져올수 있다(콘솔에 뜬다)
+            console.log(fo.ddd)//다른 태그는 불러올 수 없다.(콘솔에 안뜸)
+
+            let f = document.getElementById('fo');//가지고 온다음 써야함
+            console.log (f.querySelector(".div"))//클래스를 가져오는건 가능
+            //console.log(fo.getElementById('ddd'))//아이디로 가져오는건 불가능
+
+            f.querySelector(".div").innerHTML = '다른 값 변경 가능'
+            document.getElementById('ddd').innerHTML = "다른 값 변경 가능"
+            //아이디로 값 바꾸려면 위처럼
+
+            .setInterVal(n1, 1000) > n1을 1초마다 호출함
+            clearTimeout > 시간메소드 쓴것 종료시킴
+
+            .setAttribute > 만들어둔 클래스 요소를 추가 시킬수 있음
+                function myFunction() { document.getElementById("myH1").setAttribute("class", "democlass") }
+                위와 같이 어트리뷰트 뒤 괄호에는 ('class', '만들어둔 클래스명') 순으로 넣는다
+            .removeAttribute > 반대로 들어간 클래스 요소를 없애버린다
+            클래스가 들어가 있는 태그는 <h1 claa="ele"> 이런식이여서 삭제는
+            document.getElementsByTagName("H1")[0].removeAttribute("class"); 와 같이 한다
+
+            .querySelector > querySelector() 메서드는 
+                요소의 지정된 CSS 선택기와 일치하는 첫 번째 하위 요소를 반환합니다.
+                참고: querySelector() 메서드는 지정된 선택기와 일치하는 첫 번째 요소만 반환합니다. 
+                일치하는 항목을 모두 반환하려면 대신 querySelectorAll() 메서드를 사용하세요.
+
+            .addEventListener > btns[i].addEventListener('click', btnTxt);
+            온클릭이랑 똑같은데...? 쓰는 방법이 좀 다른가봄
+

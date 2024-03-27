@@ -93,11 +93,11 @@ type="email" value="ex@co.kr"><br><!--이메일 타입은 골뱅이가 있어야
 
 <form action="ex06.html"><!--form 다른데로 정보를 보낼때 필요-->
 
-        <input type="text" name="test_id" placeholder="아이디 입력" required><br><!--리콰이어 정보없으면 못넘기게 함-->
-        <input type="tel" placeholder="예)010-xxxx-xxxx" pattern="\d{3}-\d{4}-\d{4}" name="test_num" required>
-        <!--네임은 다른 페이지에서 정보를 보고 받아오는 역할로 꼭 필요함-->
-        <input type="test" readonly value="쓸수 없음"><br>
-        <input type="submit" value="전송"><br><!--버튼과 같다-->
+<input type="text" name="test_id" placeholder="아이디 입력" required><br><!--리콰이어 정보없으면 못넘기게 함-->
+<input type="tel" placeholder="예)010-xxxx-xxxx" pattern="\d{3}-\d{4}-\d{4}" name="test_num" required>
+<!--네임은 다른 페이지에서 정보를 보고 받아오는 역할로 꼭 필요함-->
+<input type="test" readonly value="쓸수 없음"><br>
+<input type="submit" value="전송"><br><!--버튼과 같다-->
 
 <header> <!--헤더든 div든 묶어주는 역할일뿐 똑같다--> <nav>
 

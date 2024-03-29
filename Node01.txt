@@ -46,6 +46,9 @@ app.set("views", "./") //이 기능을 볼거고
 app.set("view engine", "ejs")//그걸 ejs를 통해 볼꺼다
 
 
+res.render("") > 괄호안 파일로 이동한다. 파일이 있어야만 작동
+res.send("") >  괄호안 텍스트를 내보낸다. 파일이 없어도 작동
+
 app.get("/", (req, res)=>{
     //res.send("기본 페이지");
     res.render("index") 

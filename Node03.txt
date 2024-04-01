@@ -1,0 +1,49 @@
+새프로젝트에 설치할 라이브러리
+express / ejs / supervisor / cookie-parser
+express-session
+
+http 클라이언트와 서버가
+서로 값만 전달하고 연결을 끊는다.
+그래서 로그인시 키를 하나 만들어 서버가 클라이언트로 보냄
+
+쿠키는 사용자가 쓰는 것
+세션은 서버에서 사용하는것.
+
+쿠키는 외부에서 접근이 가능해 보안 취약
+
+https://devuna.tistory.com/23
+
+
+const cookieConfig = {
+    httpOnly : true, //웹통신에서 적용하겠다는 의미
+    macAge : 5000, // 5초
+    //signed : true, //쿠키를 암호화 한다(기준이 될 키값이 필요하다)
+}
+
+
+
+//app.use(cookieParser("아무값이나키로설정"));
+//라우터보다 위에 적어야 기능함
+app.use(cookieParser());
+메인에서 위같이 적고
+
+//let cart_list = req.signedCookies.cart_list;
+사용하는 페이지(컨트롤러) 에서 받아서 사용
+
+
+// close(); //window. 생략 가능
+s
+
+window.open("/cookie/popup", "", opt)
+//공백을 줘야 새창에 열림,안주면 현페이지에서 바뀜
+
+
+
+router.get("/save/:goods", ctrl.save)
+// save/ 로 들어오는 goods라는 변수를 받으면 ctrl.save로 이동한다는 의미
+//변수를 받아주려면 콜론이 필요하다
+
+
+const goods_id = req.params.goods;
+    //링크타고 넘어가는 경로는 params 이용
+    
